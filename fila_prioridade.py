@@ -45,7 +45,7 @@ class FilaPrioridade:
             self.__inicio = novo_no
         else:
             atual = self.__inicio
-            while atual.prox is not None and atual.prox.prioridade <= prioridade:
+            while atual.prox is not None and atual.prox.prioridade >= prioridade:
                 atual = atual.prox
             novo_no.prox = atual.prox
             atual.prox = novo_no
